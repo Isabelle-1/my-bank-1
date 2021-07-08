@@ -46,7 +46,7 @@ class CheckingAccountTest {
 	}
 	
 	@Test
-	void deposit_amount_equal_to_zero__throws() {
+	void deposit__amount_equal_to_zero__throws() {
 		// another bad amount
 		double amount = 0.0;
 		
