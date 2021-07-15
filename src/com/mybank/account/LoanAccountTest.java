@@ -7,10 +7,12 @@ import org.junit.jupiter.api.Test;
 
 class LoanAccountTest {
 	LoanAccount account;
+	
+	static final double defaultLoanLimit = 10000.0;
 
 	@BeforeEach
 	void setUp() throws Exception {
-		this.account = new LoanAccount("test customer", "test account name", 0.0, "test account number", 10000.0);
+		this.account = new LoanAccount("test customer", "test account name", 0.0, "test account number", defaultLoanLimit);
 	}
 
 	/*
@@ -22,7 +24,7 @@ class LoanAccountTest {
 	@Test
 	public void constructor__limit_parameter__sets_limit() {
 		double limit = account.getLimit();
-		assertEquals(10000.0, limit);
+		assertEquals(defaultLoanLimit, limit);
 	}
 	
 	@Test 
